@@ -1,0 +1,67 @@
+.button {
+  position: relative;
+  display: table;
+  padding: 25px 40px;
+}
+
+.button-panel {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.button-front {
+  background-color: var(--color-main);
+}
+
+.button-back {
+  background: none;
+  border: 4px solid var(--color-main-bright);
+  opacity: 0.25;
+  left: 6px;
+  top: 6px;
+}
+
+.button-text {
+  display: block;
+  position: relative;
+  margin: 0;
+  z-index: 200;
+  font-family: var(--main-font);
+  font-size: 1.0em;
+  font-weight: bolder;
+  word-spacing: 2px;
+  pointer-events: none;
+  text-transform: uppercase;
+  color: white;
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.button:hover > .button-text {
+  font-size: 0.9em;
+}
+
+.button:hover > .button-front {
+  background-color: var(--color-secondary);
+}
+
+.button:hover > .button-back {
+  border-color: var(--color-secondary);
+  left: -12px;
+  top: -12px;
+}
+
+.button:active > .button-front {
+  background-color: var(--color-main-bright);
+  transition-duration: 0.1s;
+}
+
+.button:active > .button-back {
+  transition-duration: 0.1s;
+  border-color: var(--color-main-bright);
+  left: -8px;
+  top: -8px;
+}

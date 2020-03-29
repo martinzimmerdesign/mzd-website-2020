@@ -1,0 +1,10 @@
+.footer {
+  background-image: none;
+  background-color: var(--color-footer-bg);
+  line-height: 1.8em;
+}
+
+.footer_text {
+  padding-top: 30px;
+  opacity: 0.5;
+}

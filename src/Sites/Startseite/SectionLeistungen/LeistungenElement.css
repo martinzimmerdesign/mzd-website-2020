@@ -1,0 +1,180 @@
+.leistung {
+  font-family: var(--font-main);
+  position: relative;
+  height: auto;
+  width: 800px;
+  max-width: calc(100% - 120px);
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  margin: 0 auto;
+  background-image: var(--leistungen-grad);
+  padding: 40px;
+}
+
+.gradient_leistungen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: var(--grad-bg-portfolio-el);
+  opacity: 0.15;
+  border-radius: 8px;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.leistung_title {
+  color: var(--color-main);
+  font-size: var(--font-size-xsl);
+  margin: 10px 0;
+  font-weight: 600;
+  z-index: 200;
+}
+
+.leistung_text {
+  display: inline-block;
+  color: white;
+  line-height: 1.6em;
+  width: 50%;
+  max-width: 400px;
+  font-size: var(--font-size-m);
+  z-index: 200;
+}
+
+.leistungen_button_position {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  z-index: 200;
+}
+
+.leistung_index {
+  display: none;
+}
+
+.image_wrapper {
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 350px;
+}
+
+.leistung_line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 150vw;
+  left: -50vw;
+  background-color: var(--color-main-bright);
+}
+
+.icon_wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  z-index: 200;
+  background-image: var(--leistungen-icon-passive-grad);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.leistung_image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 60px;
+  z-index: 400;
+}
+
+
+@media (min-width: 801px) {
+
+  .leistung:hover {
+    box-shadow: 0px 6px 4px rgba(0,0,0,0.3);
+    transform: translateY(-15px);
+  }
+
+  .leistung:hover > .gradient_leistungen {
+    opacity: 0.20;
+  }
+
+  .icon_wrapper:hover {
+    background-image: var(--leistungen-icon-active-grad);
+  }
+
+  .icon_wrapper_active {
+    background-image: var(--leistungen-icon-active-grad);
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .leistung {
+    font-family: var(--font-main);
+    position: relative;
+    display: inline-block;
+    height: 300px;
+    width: calc(100% - 40px);
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 5px 4px rgba(0,0,0,0.2);
+    transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    margin: 100px 0px;
+    background-image: var(--leistungen-grad);
+    padding: 20px;
+  }
+
+  .leistung_title {
+    color: var(--color-main);
+    font-size: 1.4em;
+    margin-top: 60px;
+    margin-bottom: 0px;
+  }
+
+  .leistung_text {
+    color: white;
+    line-height: 1.6em;
+    width: 100%;
+  }
+
+  .leistung_index {
+    display: block;
+    position: absolute;
+    font-size: 0.8em;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+  }
+
+  .icon_wrapper {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 30px;
+    top: -70px;
+    z-index: 400;
+    background-image: var(--leistungen-icon-passive-grad);
+    padding: 20px;
+    border-radius: 8px;
+    left: auto;
+    transform: translate(0, 0);
+  }
+
+  .leistung_image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 60px;
+    z-index: 400;
+  }
+}
