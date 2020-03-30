@@ -1,7 +1,7 @@
 .leistung {
   font-family: var(--font-main);
   position: relative;
-  height: auto;
+  height: 210px;
   width: 800px;
   max-width: calc(100% - 120px);
   border-radius: 8px;
@@ -50,6 +50,10 @@
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1000px) {
+
+  .leistung {
+    height: auto;
+  }
 
   .leistung_text {
     width: 100%;

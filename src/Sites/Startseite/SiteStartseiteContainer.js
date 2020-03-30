@@ -4,6 +4,7 @@ import Leistungen from './SectionLeistungen/Leistungen';
 import Portfolio from './SectionPortfolio/Portfolio';
 import Kontakt from './SectionKontakt/Kontakt';
 import Footer from 'Components/Footer/Footer.js';
+import AnimationContainerTest from './AnimationContainerTest.js';
 
 
 export default class SiteStartseiteContainer extends React.Component {
