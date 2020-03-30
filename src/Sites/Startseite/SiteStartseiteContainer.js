@@ -10,6 +10,7 @@ export default class SiteStartseiteContainer extends React.Component {
   render() {
     return (
       <div>
+        <LandingPage />
         <Leistungen />
         <Portfolio />
         <Kontakt />

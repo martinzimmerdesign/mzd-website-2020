@@ -68,3 +68,26 @@
   content: url("./img/arrow_icon.png");
   height: 30px;
 }
+
+
+@media (max-width: 1000px) {
+
+  .landing_logo {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    height: 30px;
+  }
+
+  .landing_text_container {
+    transform: scale(0.7);
+    margin: 0;
+  }
+
+  .landing_info {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+}

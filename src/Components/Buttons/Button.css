@@ -40,20 +40,6 @@
   transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.button:hover > .button-text {
-  font-size: 0.9em;
-}
-
-.button:hover > .button-front {
-  background-color: var(--color-secondary);
-}
-
-.button:hover > .button-back {
-  border-color: var(--color-secondary);
-  left: -12px;
-  top: -12px;
-}
-
 .button:active > .button-front {
   background-color: var(--color-main-bright);
   transition-duration: 0.1s;
@@ -64,4 +50,23 @@
   border-color: var(--color-main-bright);
   left: -8px;
   top: -8px;
+}
+
+
+@media (min-width: 801px) {
+
+  .button:hover > .button-text {
+    font-size: 0.9em;
+  }
+
+  .button:hover > .button-front {
+    background-color: var(--color-secondary);
+  }
+
+  .button:hover > .button-back {
+    border-color: var(--color-secondary);
+    left: -12px;
+    top: -12px;
+  }
+
 }
