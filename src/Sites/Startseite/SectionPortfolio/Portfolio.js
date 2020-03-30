@@ -16,7 +16,7 @@ export default class Portfolio extends React.Component {
     return (
       <div className="section_container">
         <div className="section_content">
-          <TitleComp variants= title={data.title} text={data.text} />
+          <TitleComp  title={data.title} text={data.text} />
                   <PortfolioElementContainer itemsArray={portfolioData} />
         </div>
       </div>
