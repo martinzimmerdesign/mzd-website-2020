@@ -4,12 +4,14 @@
   display: inline-block;
   height: 420px;
   width: 320px;
+  max-width: 100%;
   border-radius: 8px;
   box-shadow: 0px 5px 4px rgba(0,0,0,0.2);
   transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-  margin: 40px;
+  margin: 60px auto;
   overflow: hidden;
 }
+
 
 .button_position {
   z-index: 200;
@@ -61,11 +63,36 @@
   left: 20px;
 }
 
-.element:hover {
-  box-shadow: 0px 8px 4px rgba(0,0,0,0.3);
-  transform: translateY(-15px);
+
+
+@media (min-width: 801px) {
+
+  .element:hover {
+    box-shadow: 0px 8px 4px rgba(0,0,0,0.3);
+    transform: translateY(-15px);
+  }
+
+  .element:hover > .gradient {
+    opacity: 0.30;
+  }
+
 }
 
-.element:hover > .gradient {
-  opacity: 0.30;
+@media (max-width: 800px) {
+
+  .element {
+    font-family: var(--main-font);
+    position: relative;
+    display: inline-block;
+    height: 420px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 5px 4px rgba(0,0,0,0.2);
+    transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+
 }

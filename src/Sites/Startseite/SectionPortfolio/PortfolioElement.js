@@ -6,7 +6,8 @@ import './PortfolioElement.css';
 class PortfolioElement extends React.Component {
   render() {
     return (
-      <div key={this.props.key} className="element swiper-slide">
+      <div class="swiper-slide">
+      <div key={this.props.key} className="element">
       <h1 className="name">{this.props.name}</h1>
       <h3 className="category">{this.props.category}</h3>
 
@@ -17,6 +18,7 @@ class PortfolioElement extends React.Component {
       <div className="gradient"></div>
       <img className="image" src={this.props.image}></img>
       </div>
+    </div>
     );
   }
 }
