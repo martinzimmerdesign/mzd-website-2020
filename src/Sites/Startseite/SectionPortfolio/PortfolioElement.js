@@ -32,7 +32,7 @@ class PortfolioElement extends React.Component {
 
     return (
       <div class="swiper-slide">
-      <motion.div variants={variants.cardContainer} key={this.props.key} className="element">
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} variants={variants.cardContainer} key={this.props.key} className="element">
       <motion.h1 variants={variants.cardElements} className="name">{this.props.name}</motion.h1>
       <motion.h3 variants={variants.cardElements} className="category">{this.props.category}</motion.h3>
       <Button animation={true} name="Zur Case Study" addClass="button_position" link={this.props.link} />

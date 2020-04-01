@@ -1,9 +1,39 @@
 import React from 'react';
 import './LandingPage.css';
 import SectionContainer from 'Components/Container/SectionContainer.js';
+import { motion } from "framer-motion";
+import ease from 'Styles/Transitions.js';
 
 export default class LandingPage extends React.Component {
   render() {
+
+    const variants = {
+            buttonContainer: {
+              enter: {
+                transition: {
+                  when: "beforeChildren",
+                  staggerChildren: 0.06,
+                }
+              },
+              exit: {
+                transition: {
+                }
+              }
+            },
+            landingInfo: {
+              enter: { y: 0, opacity: 1 },
+              exit: { y: 10, opacity: 0 }
+            },
+            buttonBack: {
+              enter: { y: 0, opacity: 0.25 },
+              exit: { y: 10, opacity: 0 }
+            },
+            noMotion: {
+              enter: {  },
+              exit: {  }
+            },
+        };
+
     return (
         <SectionContainer addClass="landing">
           <div className="landing_content_container">

@@ -1,3 +1,17 @@
+.swiper-container {
+   display: flex;
+   max-width: 1200px;
+}
+.swiper-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  margin: 0 auto;
+}
+
 .element {
   font-family: var(--main-font);
   position: relative;

@@ -52,7 +52,7 @@ export default class Kontakt extends React.Component {
             </div>
         </motion.div>
         </motion.div>
-        <Button animation={true} name="Senden" addClass="submit" />
+        <Button animation={true} name="Senden" addClass="submit"/>
       </motion.form>
     );
   }

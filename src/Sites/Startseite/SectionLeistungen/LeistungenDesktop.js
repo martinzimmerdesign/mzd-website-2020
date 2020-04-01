@@ -33,7 +33,9 @@ export default class LeistungenDesktop extends React.Component {
               }
             },
             line: {
-              enter: { y: 0, opacity: 1, width: "150vw" },
+              enter: { y: 0, opacity: 1, width: "150vw", transition: {
+                delay: 1,
+              } },
               exit: { y: 0, opacity: 0, width: "0vw" }
             },
             contentContainer: {

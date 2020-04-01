@@ -17,8 +17,12 @@ const variants = {
             }
           }
         },
-        buttonElements: {
+        buttonMain: {
           enter: { y: 0, opacity: 1 },
+          exit: { y: 10, opacity: 0 }
+        },
+        buttonBack: {
+          enter: { y: 0, opacity: 0.25 },
           exit: { y: 10, opacity: 0 }
         },
         noMotion: {
@@ -30,9 +34,9 @@ const variants = {
 const Button = ( {name, addClass, link, animation} ) =>
 <Link to={link}>
 <motion.div variants={animation ? variants.buttonContainer : variants.noMotion} className={"button " + addClass}>
-    <motion.h1 variants={animation ? variants.buttonElements : variants.noMotion} className="button-text">{name}</motion.h1>
-    <motion.span variants={animation ? variants.buttonElements : variants.noMotion} className="button-panel button-back"></motion.span>
-    <motion.span variants={animation ? variants.buttonElements : variants.noMotion} className="button-panel button-front"></motion.span>
+    <motion.h1 variants={animation ? variants.buttonMain : variants.noMotion} className="button-text">{name}</motion.h1>
+    <motion.span variants={animation ? variants.buttonBack : variants.noMotion} className="button-panel button-back"></motion.span>
+    <motion.span variants={animation ? variants.buttonMain : variants.noMotion} className="button-panel button-front"></motion.span>
 </motion.div>
 </Link>
 export default Button;
