@@ -6,29 +6,54 @@ import Button from 'Components/Buttons/Button.js';
 import './FormHandler.js';
 import './KontaktFormular.css';
 import FormElement from './FormElement.js';
+import { motion } from "framer-motion";
+import ease from 'Styles/Transitions.js';
 
 export default class Kontakt extends React.Component {
   render() {
+
+    const variants = {
+            formContainer: {
+              enter: {
+                transition: {
+                  staggerChildren: 0.4,
+                }
+              },
+              exit: {
+                transition: {
+                }
+              }
+            },
+            formElements: {
+              enter: {
+                y: 0,
+                opacity: 1,
+            },
+              exit: { y: 50, opacity: 0 }
+            },
+        };
+
     return (
-      <form id="form" action="#" method="POST">
-        <h2>Kontaktformular</h2>
-        <div class="display_container">
-        <div className="display_wrapper">
+      <motion.form variants={variants.formContainer} id="form" action="#" method="POST">
+        <motion.h2 variants={variants.formElements} >Kontaktformular</motion.h2>
+        <motion.div variants={variants.formElements} class="display_container">
+        <motion.div variants={variants.formElements} className="display_wrapper">
             <FormElement tag="input" id="name" placeholder="Name"/>
             <FormElement tag="input" id="email" placeholder="E-Mail Adresse"/>
             <FormElement tag="input" id="topic" placeholder="Betreff"/>
-        </div>
-        <div className="display_wrapper">
+        </motion.div>
+        <motion.div variants={variants.formElements} className="display_wrapper">
             <div className="message_wrapper">
                 <textarea class="input" placeholder="Nachricht" id="message" name="message"></textarea>
             </div>
-            <div className="checkbox_wrapper">
-                <span class="checkbox"></span><p>Hiermit bestätige ich die <Link to="/datenschutzerklaerung"><a>Datenschutzerklärung</a></Link> gelesen zu haben und akzeptiere diese im vollen Unfang!</p>
+            <div  className="checkbox_wrapper">
+                <span class="checkbox"></span>
+                <p>Hiermit bestätige ich die <Link to="/datenschutzerklaerung"><a>Datenschutzerklärung</a></Link> gelesen zu haben und akzeptiere diese im vollen Unfang!</p>
             </div>
-        </div>
-        </div>
-        <Button name="Senden" addClass="submit" />
-      </form>
+        </motion.div>
+        </motion.div>
+        <Button animation={true} name="Senden" addClass="submit" />
+      </motion.form>
     );
   }
 }

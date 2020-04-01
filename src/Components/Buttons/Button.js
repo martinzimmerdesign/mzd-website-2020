@@ -1,13 +1,38 @@
 import React from 'react';
 import './Button.css';
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import ease from 'Styles/Transitions.js';
 
-const Button = ( {name, addClass, link} ) =>
+const variants = {
+        buttonContainer: {
+          enter: {
+            transition: {
+              when: "beforeChildren",
+              staggerChildren: 0.06,
+            }
+          },
+          exit: {
+            transition: {
+            }
+          }
+        },
+        buttonElements: {
+          enter: { y: 0, opacity: 1 },
+          exit: { y: 10, opacity: 0 }
+        },
+        noMotion: {
+          enter: {  },
+          exit: {  }
+        },
+    };
+
+const Button = ( {name, addClass, link, animation} ) =>
 <Link to={link}>
-<div className={"button " + addClass}>
-    <h1 className="button-text">{name}</h1>
-    <span className="button-panel button-back"></span>
-    <span className="button-panel button-front"></span>
-</div>
+<motion.div variants={animation ? variants.buttonContainer : variants.noMotion} className={"button " + addClass}>
+    <motion.h1 variants={animation ? variants.buttonElements : variants.noMotion} className="button-text">{name}</motion.h1>
+    <motion.span variants={animation ? variants.buttonElements : variants.noMotion} className="button-panel button-back"></motion.span>
+    <motion.span variants={animation ? variants.buttonElements : variants.noMotion} className="button-panel button-front"></motion.span>
+</motion.div>
 </Link>
 export default Button;

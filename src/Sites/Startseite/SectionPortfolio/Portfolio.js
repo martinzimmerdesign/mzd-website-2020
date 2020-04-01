@@ -5,6 +5,7 @@ import 'swiper/css/swiper.css';
 import TitleComp from "Components/TitleComp/TitleComp.js";
 import PortfolioElementContainer from './PortfolioElementContainer';
 import portfolioData from './PortfolioData.js';
+import SectionContainer from 'Components/Container/SectionContainer.js';
 
 const data = {
   title: "Portfolio",
@@ -14,12 +15,10 @@ const data = {
 export default class Portfolio extends React.Component {
   render() {
     return (
-      <div className="section_container">
-        <div className="section_content">
+      <SectionContainer>
           <TitleComp  title={data.title} text={data.text} />
                   <PortfolioElementContainer itemsArray={portfolioData} />
-        </div>
-      </div>
+        </SectionContainer>
     );
   }
 }

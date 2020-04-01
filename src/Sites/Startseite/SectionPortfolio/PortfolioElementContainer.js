@@ -2,7 +2,8 @@ import React from 'react';
 import PortfolioElement from './PortfolioElement';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-
+import { motion } from "framer-motion";
+import ease from 'Styles/Transitions.js';
 
 export default class PortfolioElementContainer extends React.Component {
   render() {

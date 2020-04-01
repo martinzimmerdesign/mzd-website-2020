@@ -5,6 +5,7 @@ import 'swiper/css/swiper.css';
 import TitleComp from "Components/TitleComp/TitleComp.js";
 import KontaktFormular from "./KontaktFormular";
 import './Kontakt.css'
+import SectionContainer from 'Components/Container/SectionContainer.js';
 
 const data = {
   title: "Kontakt",
@@ -14,12 +15,10 @@ const data = {
 export default class Kontakt extends React.Component {
   render() {
     return (
-      <div className="section_container">
-        <div className="section_content">
+      <SectionContainer>
           <TitleComp title={data.title} text={data.text} />
           <KontaktFormular />
-        </div>
-      </div>
+        </SectionContainer>
     );
   }
 }

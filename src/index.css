@@ -18,9 +18,9 @@
   --grad-bg-main: linear-gradient(to bottom, var(--color-main-bg-from) , var(--color-main-bg-to));
   --grad-bg-portfolio-el: linear-gradient(to bottom, var(--color-main-bg-from) , var(--color-main));
 
-  --leistungen-grad: linear-gradient(to top, #043541 , rgba(0,0,0,0));
-  --leistungen-icon-passive-grad: linear-gradient(to bottom, #003A41 , var(--color-main));
-  --leistungen-icon-hover-grad: linear-gradient(to bottom, var(--color-secondary) , var(--color-main-bg-from));
+  --leistungen-grad: linear-gradient(to top, #043541 , #002A3C);
+  --leistungen-icon-passive-grad: linear-gradient(to bottom, var(--color-main-bright)/*#003A41*/ , var(--color-main));
+  --leistungen-icon-hover-grad: linear-gradient(to bottom, var(--color-secondary) , var(--color-secondary));
   --leistungen-icon-active-grad: linear-gradient(to bottom, var(--color-main-bright) , var(--color-main));
   /* Fonts */
   --font-main: 'Lato', sans-serif;

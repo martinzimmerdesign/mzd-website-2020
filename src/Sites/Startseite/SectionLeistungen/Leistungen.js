@@ -4,6 +4,7 @@ import LeistungenDesktop from './LeistungenDesktop';
 import LeistungenElementContainer from './LeistungenElementContainer';
 import TitleComp from "Components/TitleComp/TitleComp.js";
 import leistungenData from './LeistungenData.js';
+import SectionContainer from 'Components/Container/SectionContainer.js';
 
 const data = {
   title: "Leistungen",
@@ -41,8 +42,7 @@ export default class Leistungen extends React.Component {
     const isDesktop = this.state.isDesktop;
 
     return (
-      <div className="section_container">
-        <div className="section_content">
+      <SectionContainer>
         <TitleComp title={data.title} text={data.text} />
 
                 <div>
@@ -53,8 +53,7 @@ export default class Leistungen extends React.Component {
               )}
             </div>
 
-        </div>
-      </div>
+        </SectionContainer>
     );
   }
 }
