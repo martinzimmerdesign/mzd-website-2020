@@ -46,6 +46,7 @@ export default class PortfolioElementContainer extends React.Component {
             category={item.category}
             link={item.link}
             image={item.image}
+            index={item.index}
           />
         ))}
         </Swiper>

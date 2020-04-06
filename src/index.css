@@ -8,13 +8,13 @@
   --color-main-bright: #2BFFD3;
   --color-main-bg-from: #10212E;
   --color-main-bg-to: #002A3C;
-  --color-landing-bg-from: #1A334E;
-  --color-landing-bg-to: #075350;
+  --color-landing-bg-from: #072635;
+  --color-landing-bg-to: #327175;
   --color-footer-bg: #0A141C;
 
   --input-passive-color: #041721;
   /* Gradients */
-  --grad-bg-landing: linear-gradient(to bottom, var(--color-landing-bg-from) , var(--color-landing-bg-to));
+  --grad-bg-landing: linear-gradient(to bottom right, var(--color-landing-bg-from) , var(--color-landing-bg-to));
   --grad-bg-main: linear-gradient(to bottom, var(--color-main-bg-from) , var(--color-main-bg-to));
   --grad-bg-portfolio-el: linear-gradient(to bottom, var(--color-main-bg-from) , var(--color-main));
 
@@ -43,7 +43,6 @@
 .section_container {
   height: auto;
   width: 100%;
-  background-image: var(--grad-bg-main);
   padding-top: 100px;
   padding-bottom: 100px;
   overflow: hidden;
@@ -79,7 +78,7 @@ h1, h2, h3, h4, h5, li, a, p {
 }
 
 body {
-  background-color: var(--color-main-bg-from);
+  background-image: var(--grad-bg-main);
   -webkit-overflow-scrolling: auto;
   -ms-overflow-style: none;
   overflow-y: auto;

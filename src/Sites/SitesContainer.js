@@ -5,6 +5,7 @@ import SiteStartseiteContainer from './Startseite/SiteStartseiteContainer';
 import Impressum from './Impressum';
 import Datenschutz from './Datenschutz';
 import ease from 'Styles/Transitions.js';
+import LocomotiveScroll from 'locomotive-scroll';
 
 export default class SitesContainer extends React.Component {
   render() {

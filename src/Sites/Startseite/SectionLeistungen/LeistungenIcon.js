@@ -19,6 +19,12 @@ class LeistungenIcon extends React.Component {
                 opacity: 0,
                 scale: 0,
                 rotate: -30
+              },
+              hover: {
+                scale: 1.15
+              },
+              tap: {
+                scale: 0.8
               }
             },
             image: {
@@ -32,13 +38,19 @@ class LeistungenIcon extends React.Component {
                 opacity: 0,
                 scale: 0,
                 rotate: 420
+              },
+              hover: {
+                scale: 1.15
+              },
+              tap: {
+                scale: 0.8
               }
             },
         };
 
     return (
-      <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.8 }} variants={variants.imageContainer} key={this.props.key} onClick={() => this.props.onClick()} className="icon_wrapper">
-      <motion.img whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.8 }} variants={variants.image} className="leistung_image" src={this.props.image} />
+      <motion.div whileHover="hover" whileTap="tap" variants={variants.imageContainer} key={this.props.key} onClick={() => this.props.onClick()} className="icon_wrapper">
+      <motion.img variants={variants.image} className="leistung_image" src={this.props.image} />
       </motion.div>
     );
   }

@@ -4,10 +4,11 @@ import gb_image from "./img/ef.png";
 const portfolioData = [
   {
     id: 0,
-    name: "Martin Zimmer Design",
+    name: "Mama Zimmer Design",
     category: 'Social Media',
     link: "/mzd-case-study",
-    image: mzd_image
+    image: mzd_image,
+    index: 0,
   },
   {
     id: 1,
@@ -15,13 +16,15 @@ const portfolioData = [
     category: 'Cooperate Design',
     link: "/sass",
     image: mzd_image,
+    index: 1,
   },
   {
     id: 2,
     name: "Martin Zimmer Design",
     category: 'Social Media',
     link: "/mzd-case-study",
-    image: gb_image
+    image: gb_image,
+    index: 2,
   }
 ]
 
