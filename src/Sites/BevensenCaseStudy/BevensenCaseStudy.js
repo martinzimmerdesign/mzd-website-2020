@@ -17,14 +17,16 @@ export default class BevensenCaseStudy extends React.Component {
   render() {
     return (
       <React.Fragment>
-
         <SectionContainer addClass="case-study">
 
-          <BackButton animation="true" link="/" addClass="backbutton_position" />
+          <BackButton animation="true" link="/" />
 
           <HeaderBlock title={bevensenData.title} subtitle={bevensenData.subtitle} image={bevensenData.header_image} />
+
           <TextBlock title="Übersicht" paragraph={bevensenData.overview} />
+
           <ImageBlock data={bevensenData.image} />
+
           <TextBlock title="Herausforderungen" paragraph={bevensenData.challenges} />
 
           <div className="keywords-block">
@@ -35,8 +37,11 @@ export default class BevensenCaseStudy extends React.Component {
           </div>
 
           <TextBlock title="Weg zum Ziel" paragraph={bevensenData.weg_zum_ziel} />
+
           <LighthouseBlock data={bevensenData.lighthouse} />
+
           <TextBlock title="Das Ergebnis" paragraph={bevensenData.result} />
+
         </SectionContainer>
         <Footer />
       </React.Fragment>

@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Footer from 'Components/Footer/Footer.js';
 import SectionContainer from 'Components/Container/SectionContainer.js';
+import BackButton from "Components/Buttons/BackButton.js";
 
 export default class Datenschutz extends React.Component {
   render() {
     return (
       <React.Fragment>
       <SectionContainer>
+
+<BackButton animation="true" link="/" />
 
         <h1>
           Datenschutz

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from 'Components/Footer/Footer.js';
 import SectionContainer from 'Components/Container/SectionContainer.js';
 import Button from 'Components/Buttons/Button.js';
+import BackButton from "Components/Buttons/BackButton.js";
 
 export default class Impressum extends React.Component {
   render() {
@@ -10,7 +11,7 @@ export default class Impressum extends React.Component {
       <React.Fragment>
       <SectionContainer>
 
-        <Button animation={false} name="Zur Startseite" addClass="leistungen_button_position" link="/" />
+        <BackButton animation="true" link="/" />
 
         <h1>
           Datenschutz

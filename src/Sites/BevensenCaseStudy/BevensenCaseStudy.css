@@ -13,8 +13,15 @@
   width: 340px;
 }
 
-/* Desktop Änderungen bis 1440px Start */
 @media only screen and (max-width: 1440px) {
+
+  .keywords-block h2 {
+    width: 240px;
+  }
+
+}
+
+@media only screen and (max-width: 630px) {
 
   .keywords-block h2 {
     display: block;

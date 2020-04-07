@@ -1,7 +1,9 @@
 .backbutton {
+  position: fixed;
+  top: 80px;
+  right: 80px;
   display: flex;
   background-color: var(--color-main);
-  color: black;
   justify-content: center;
   align-items: center;
   width: fit-content;
@@ -14,7 +16,6 @@
 .backbutton-text {
   font-size: var(--font-size-l);
   margin: 0 20px;
-  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -24,30 +25,32 @@
   transform: rotate(90deg);
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 1440px) {
 
   .backbutton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
+    top: 30px;
+    right: 30px;
     padding: 10px 0px;
     padding-left: 10px;
     padding-right: 15px;
-    z-index: 1000;
+  }
+
+}
+
+@media only screen and (max-width: 630px) {
+
+  .backbutton {
+    top: 15px;
+    right: 15px;
   }
 
   .backbutton-text {
     font-size: var(--font-size-m);
     margin: 0 5px;
-    text-decoration: none;
-    text-transform: uppercase;
   }
 
   .backbutton-icon {
-    content: url("./img/arrow_icon.png");
     height: 30px;
-    transform: rotate(90deg);
   }
 
 }
