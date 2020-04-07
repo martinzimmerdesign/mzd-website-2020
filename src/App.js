@@ -9,9 +9,8 @@ function App() {
     <div>
       <div className="App">
         <BrowserRouter>
-          <ScrollToTop>
+          <ScrollToTop />
           <SitesContainer />
-          </ScrollToTop>
         </BrowserRouter>
       </div>
     </div>

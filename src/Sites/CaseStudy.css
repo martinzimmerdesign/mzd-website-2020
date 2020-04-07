@@ -1,0 +1,18 @@
+.case-study {
+  padding-top: 50vh;
+  background-color: white;
+}
+
+.backbutton_position {
+  position: fixed;
+  top: 80px;
+  right: 80px;
+}
+
+.figure_subtitle {
+  font-weight: lighter;
+  color: #898989;
+  margin: 30px auto;
+  text-align: center;
+  width: 90%;
+}

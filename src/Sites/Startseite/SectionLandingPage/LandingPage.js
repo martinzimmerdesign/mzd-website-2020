@@ -26,7 +26,7 @@ export default class LandingPage extends React.Component {
 
 
     const variants = {
-            buttonContainer: {
+            container: {
               enter: {
                 transition: {
                   when: "beforeChildren",
@@ -39,16 +39,16 @@ export default class LandingPage extends React.Component {
               }
             },
             lottie: {
-              enter: { x: 0, opacity: 1, transition: { delay: 4},},
+              enter: { x: 0, opacity: 1},
               exit: { x: "50vw", opacity: 0 }
             },
-            buttonBack: {
-              enter: { y: 0, opacity: 0.25 },
-              exit: { y: 10, opacity: 0 }
+            titleText: {
+              enter: { y: 0, opacity: 1 },
+              exit: { y: 40, opacity: 0 }
             },
-            noMotion: {
-              enter: {  },
-              exit: {  }
+            subtitleText: {
+              enter: { y: 0, opacity: 1 },
+              exit: { y: 40, opacity: 0 }
             },
         };
 
@@ -67,19 +67,19 @@ export default class LandingPage extends React.Component {
         <SectionContainer addClass="landing">
           <div className="landing_content_container">
 
-            <div className="landing_text_container">
-              <h1 className="landing_header">Design und Entwicklung.</h1>
-              <h3 className="landing_text">Hi, mein Name ist Martin Zimmer.</h3>
-            </div>
+            <motion.div variants={variants.container} className="landing_text_container">
+              <motion.h1 variants={variants.titleText} className="landing_header">Design und Entwicklung.</motion.h1>
+              <motion.h3 variants={variants.subtitleText} className="landing_text">Hi, mein Name ist Martin Zimmer.</motion.h3>
+            </motion.div>
 
-            <div className="lottie_container">
+            <motion.div variants={variants.container} className="lottie_container">
               <motion.div onDragEnd={() => this.changeZIndex()} style={{zIndex: this.state.zIndexValue ? "100" : "400"}} drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} variants={variants.lottie} className="lottie_wrapper" id="lottie_design">
               <Lottie options={designOptions} />
               </motion.div>
               <motion.div onDragEnd={() => this.changeZIndex()} style={{zIndex: this.state.zIndexValue ? "400" : "100"}} drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} variants={variants.lottie} className="lottie_wrapper" id="lottie_code">
               <Lottie options={codeOptions} />
               </motion.div>
-            </div>
+            </motion.div>
 
           </div>
 

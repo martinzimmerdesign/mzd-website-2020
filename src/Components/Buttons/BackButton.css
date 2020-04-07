@@ -1,0 +1,25 @@
+.backbutton {
+  display: flex;
+  background-color: rgba(0,0,0,0.7);
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 20px 0px;
+  padding-left: 30px;
+  padding-right: 40px;
+  z-index: 1000;
+}
+
+.backbutton-text {
+  font-size: var(--font-size-l);
+  margin: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.backbutton-icon {
+  content: url("./img/arrow_icon.png");
+  height: 40px;
+  transform: rotate(90deg);
+}

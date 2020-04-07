@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 
 :root {
   /* Colors */
@@ -24,7 +25,7 @@
   --leistungen-icon-active-grad: linear-gradient(to bottom, var(--color-main-bright) , var(--color-main));
   /* Fonts */
   --font-main: 'Lato', sans-serif;
-  --font-secondary: 'Playfair Display', serif;
+  --font-secondary: 'Noto Serif', serif;
   --font-size-m: 1em;
   --font-size-xm: 1.3em;
   --font-size-l: 1.5em;
@@ -62,6 +63,10 @@
     padding: 0px calc(var(--border-main)/4);
     margin: 0px auto;
   }
+}
+
+a {
+  text-decoration: blink;
 }
 
 li {

@@ -5,7 +5,7 @@ import SiteStartseiteContainer from './Startseite/SiteStartseiteContainer';
 import Impressum from './Impressum';
 import Datenschutz from './Datenschutz';
 import ease from 'Styles/Transitions.js';
-import LocomotiveScroll from 'locomotive-scroll';
+import BevensenCaseStudy from './BevensenCaseStudy/BevensenCaseStudy.js';
 
 export default class SitesContainer extends React.Component {
   render() {
@@ -33,7 +33,7 @@ export default class SitesContainer extends React.Component {
         <React.Fragment>
           <Route
           render={({ location }) => (
-          <AnimatePresence initial={false}>
+          <AnimatePresence exitBeforeEnter initial={false}>
             <motion.div
                   variants={variants}
                   initial="initial"
@@ -46,6 +46,7 @@ export default class SitesContainer extends React.Component {
                     <Route exact path="/" component={SiteStartseiteContainer}/>
                     <Route path="/impressum" component={Impressum}/>
                     <Route path="/datenschutzerklaerung" component={Datenschutz}/>
+                    <Route path="/bevensen-case-study" component={BevensenCaseStudy}/>
                   </Switch>
             </motion.div>
           </AnimatePresence>

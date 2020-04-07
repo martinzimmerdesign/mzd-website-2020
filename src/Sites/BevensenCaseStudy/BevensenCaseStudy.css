@@ -1,0 +1,25 @@
+.keywords-block {
+  text-align: center;
+}
+
+.keywords-block h2 {
+  display: inline-block;
+  margin: 20px 40px;
+  color: #323232;
+  background-color: var(--color-main-bright);
+  padding: 20px 0;
+  text-align: center;
+  letter-spacing: 0.05em;
+  width: 340px;
+}
+
+/* Desktop Änderungen bis 1440px Start */
+@media only screen and (max-width: 1440px) {
+
+  .keywords-block h2 {
+    display: block;
+    margin: 20px auto;
+    width: auto;
+  }
+
+}

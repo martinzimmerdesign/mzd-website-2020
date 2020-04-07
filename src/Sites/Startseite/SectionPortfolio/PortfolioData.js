@@ -14,7 +14,7 @@ const portfolioData = [
     id: 1,
     name: "Gefäßpraxis Bevensen",
     category: 'Cooperate Design',
-    link: "/sass",
+    link: "/bevensen-case-study",
     image: mzd_image,
     index: 1,
   },
