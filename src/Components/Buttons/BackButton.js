@@ -37,12 +37,12 @@ const variants = {
 
 const BackButton = ( {addClass, link, animation} ) =>
 <Link to={link}>
-  <motion.div whileHover="hover" whileTap="tap" variants={animation ? variants.buttonContainer : variants.noMotion} className={"backbutton " + addClass}>
+  <div className={"backbutton " + addClass}>
 
-      <motion.img variants={animation ? variants.buttonIcon : variants.noMotion} className="backbutton-icon"></motion.img>
+      <img  className="backbutton-icon"></img>
 
-<motion.h1 variants={animation ? variants.buttonText : variants.noMotion} className="backbutton-text">Zurück</motion.h1>
+<h1 className="backbutton-text">Zurück</h1>
 
-  </motion.div>
+  </div>
 </Link>
 export default BackButton;
