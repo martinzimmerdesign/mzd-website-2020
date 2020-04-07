@@ -1,6 +1,10 @@
 .case-study {
-  padding-top: 50vh;
   background-color: white;
+  padding: 0;
+}
+
+.top-section {
+  padding-top: 50vh;
 }
 
 .figure_subtitle {

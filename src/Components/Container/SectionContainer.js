@@ -27,7 +27,7 @@ function SectionContainer (props) {
     className={"section_container " + props.addClass}
     ref={ref}
     variants={variants}
-    initial="enter"
+    initial="false"
     animate={inView ? "enter" : "exit"}
     exit="exit" >
     <div className="section_content">

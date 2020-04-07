@@ -16,3 +16,11 @@
   font-family: var(--font-secondary);
   color: #323232;
 }
+
+@media only screen and (max-width: 630px) {
+
+  .text-block p {
+    font-size: var(--font-size-m);
+  }
+
+}

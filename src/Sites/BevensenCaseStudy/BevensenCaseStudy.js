@@ -17,7 +17,7 @@ export default class BevensenCaseStudy extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <SectionContainer addClass="case-study">
+        <SectionContainer addClass="case-study top-section">
 
           <BackButton animation="true" link="/" />
 

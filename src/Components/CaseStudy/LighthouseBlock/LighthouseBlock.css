@@ -64,6 +64,17 @@
 
 @media only screen and (max-width: 630px) {
 
+  .circle {
+    height: 150px;
+    width: 150px;
+    border: 10px solid var(--color-main-bright);
+  }
+
+  .circle h2 {
+    font-size: 3em;
+    line-height: 150px;
+  }
+
   .circle_wrapper {
     display: block;
     margin: 50px auto;
