@@ -23,3 +23,33 @@
   height: 40px;
   transform: rotate(90deg);
 }
+
+@media only screen and (max-width: 630px) {
+
+  .backbutton {
+    display: flex;
+    background-color: rgba(0,0,0,0.7);
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px 0px;
+    padding-left: 15px;
+    padding-right: 20px;
+    z-index: 1000;
+  }
+
+  .backbutton-text {
+    font-size: var(--font-size-l);
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .backbutton-icon {
+    content: url("./img/arrow_icon.png");
+    height: 40px;
+    transform: rotate(90deg);
+  }
+
+}
