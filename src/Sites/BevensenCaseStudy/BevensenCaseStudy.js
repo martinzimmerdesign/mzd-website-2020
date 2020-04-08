@@ -41,7 +41,9 @@ export default class BevensenCaseStudy extends React.Component {
       <React.Fragment>
         <SectionContainer addClass="case-study top-section">
 
+          <BlockWrapper>
           <BackButton animation="true" link="/" />
+          </BlockWrapper>
 
           <HeaderBlock title={bevensenData.title} subtitle={bevensenData.subtitle} image={bevensenData.header_image} />
 
