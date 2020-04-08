@@ -8,6 +8,22 @@ import ease from 'Styles/Transitions.js';
 export default class PortfolioElementContainer extends React.Component {
   render() {
 
+
+    const variants = {
+            blockContainer: {
+              enter: {
+                transition: {
+                  when: "beforeChildren",
+                  staggerChildren: 0.1,
+                }
+              },
+              exit: {
+                transition: {
+                }
+              }
+            }
+      };
+
     const params = {
       pagination: {
         el: '.swiper-pagination',
@@ -38,6 +54,7 @@ export default class PortfolioElementContainer extends React.Component {
 
     return (
       <React.Fragment>
+        <motion.div variants={variants.blockContainer}>
          <Swiper {...params}>
         {this.props.itemsArray.map(item => (
           <PortfolioElement
@@ -50,6 +67,7 @@ export default class PortfolioElementContainer extends React.Component {
           />
         ))}
         </Swiper>
+        </motion.div>
       </React.Fragment>
     );
   }

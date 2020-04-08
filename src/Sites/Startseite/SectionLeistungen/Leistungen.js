@@ -8,7 +8,6 @@ import SectionContainer from 'Components/Container/SectionContainer.js';
 
 const data = {
   title: "Leistungen",
-  text: "Für Fragen, Vorschläge oder Anregungen bin ich immer offen, also schreiben Sie mir gerne unverbindlich eine Nachricht.",
 };
 
 export default class Leistungen extends React.Component {
@@ -43,7 +42,7 @@ export default class Leistungen extends React.Component {
 
     return (
       <SectionContainer>
-        <TitleComp title={data.title} text={data.text} />
+        <TitleComp title={data.title} />
 
                 <div>
               {isDesktop ? (

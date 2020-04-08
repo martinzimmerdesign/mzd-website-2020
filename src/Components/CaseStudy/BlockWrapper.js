@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from "framer-motion";
 
-function SectionContainer (props) {
+function BlockWrapper (props) {
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
@@ -24,16 +24,13 @@ function SectionContainer (props) {
 
   return (
     <motion.div
-    className={"section_container " + props.addClass}
     ref={ref}
     variants={variants}
     initial="false"
     animate={inView ? "enter" : "exit"}
     exit="exit" >
-    <div className="section_content">
       {props.children}
-      </div>
     </motion.div>
   );
 }
-export default SectionContainer;
+export default BlockWrapper;

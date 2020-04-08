@@ -11,6 +11,7 @@
   padding-left: 30px;
   padding-right: 40px;
   z-index: 1000;
+  border-radius: 100px;
 }
 
 .backbutton-text {

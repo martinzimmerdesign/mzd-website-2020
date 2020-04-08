@@ -49,6 +49,10 @@
 
 @media only screen and (max-width: 1440px) {
 
+  .lighthouse-block > .swiper-container {
+     max-width: 900px;
+  }
+
   .circle {
     height: 100px;
     width: 100px;

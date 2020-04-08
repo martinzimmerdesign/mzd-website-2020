@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import './HeaderBlock.css';
+import BlockWrapper from 'Components/CaseStudy/BlockWrapper.js';
+
 
 const variants = {
         blockContainer: {
@@ -23,6 +25,7 @@ const variants = {
   };
 
 const HeaderBlock = ( {title, subtitle, image} ) =>
+<BlockWrapper>
 <div className="header">
   <div className="header_content">
     <h1>{title}</h1>
@@ -30,4 +33,5 @@ const HeaderBlock = ( {title, subtitle, image} ) =>
   </div>
   <img className="header_image" src={image} />
 </div>
+</BlockWrapper>
 export default HeaderBlock;
