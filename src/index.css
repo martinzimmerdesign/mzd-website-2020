@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 
-:root {
-  /* Colors */
+/*
   --color-main: #17B292;
   --color-secondary: #FF9600;
   --color-main-bright: #2BFFD3;
@@ -14,12 +13,27 @@
   --color-footer-bg: #0A141C;
 
   --input-passive-color: #041721;
+
+  */
+
+:root {
+  /* Colors */
+  --color-main: #10D0BC;
+  --color-secondary: #FAB52E;
+  --color-main-bright: #2BFFD3;
+  --color-main-bg-from: #1B2540;
+  --color-main-bg-to: #1B2540;
+  --color-landing-bg-from: #344497;
+  --color-landing-bg-to: #344497;
+  --color-footer-bg: #0A141C;
+
+  --input-passive-color: rgba(0,0,0,0.3);
   /* Gradients */
   --grad-bg-landing: linear-gradient(to bottom right, var(--color-landing-bg-from) , var(--color-landing-bg-to));
   --grad-bg-main: linear-gradient(to bottom, var(--color-main-bg-from) , var(--color-main-bg-to));
   --grad-bg-portfolio-el: linear-gradient(to bottom, var(--color-main-bg-from) , var(--color-main));
 
-  --leistungen-grad: linear-gradient(to top, #043541 , #002A3C);
+  --leistungen-grad: linear-gradient(to top, #3B4260, #234457);
   --leistungen-icon-passive-grad: linear-gradient(to bottom, var(--color-main-bright)/*#003A41*/ , var(--color-main));
   --leistungen-icon-hover-grad: linear-gradient(to bottom, var(--color-secondary) , var(--color-secondary));
   --leistungen-icon-active-grad: linear-gradient(to bottom, var(--color-main-bright) , var(--color-main));
