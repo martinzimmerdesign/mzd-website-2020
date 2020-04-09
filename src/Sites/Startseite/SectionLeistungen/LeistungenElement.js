@@ -42,7 +42,7 @@ export default class LeistungenElement extends React.Component {
         </motion.div>
         <motion.h1 variants={variants.cardTextElements} class="leistung_title">{this.props.name}</motion.h1>
         <motion.p variants={variants.cardTextElements} class="leistung_text">{this.props.text}</motion.p>
-        <motion.span variants={variants.cardTextElements} class="leistung_index">1/4</motion.span>
+        <motion.span variants={variants.cardTextElements} class="leistung_index">{this.props.index}/4</motion.span>
       </motion.div>
       </div>
     );

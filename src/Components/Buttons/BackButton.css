@@ -1,7 +1,7 @@
 .backbutton {
   position: fixed;
   top: 80px;
-  right: 80px;
+  right: var(--border-main);
   display: flex;
   background-color: var(--color-main);
   justify-content: center;

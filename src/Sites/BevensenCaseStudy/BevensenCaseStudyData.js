@@ -15,7 +15,7 @@ lighthouse:
       {
         id: 0,
         category: "Leistung",
-        score: "15",
+        score: "100",
       },
       {
         id: 1,

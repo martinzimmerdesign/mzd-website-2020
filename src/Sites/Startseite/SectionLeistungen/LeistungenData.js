@@ -14,28 +14,32 @@ const leistungenData = [
     name: "Webdesign",
     text: "Ein modernes Webdesign spricht den Nutzer an und vermittelt die gewünschte Nachricht. Der Erfolg hängt von der richtigen Nutzererfahrung und einem intuitiven Design ab.",
     image: webdesign,
-    link: "/qwewq7888e"
+    link: "/qwewq7888e",
+    index: 1,
   },
   {
     id: 1,
     name: "Webentwicklung",
     text: "Ein modernes Design braucht eine zeitgemäße technische Umsetzung. Neuste Standards der Programmierung und die Betrachtung aller Gerätegrößen spielen eine sehr wichtige Rolle.",
     image: code2,
-    link: "/qwe333wqe"
+    link: "/qwe333wqe",
+    index: 2,
   },
   {
     id: 2,
     name: "Wartung & Verwaltung",
     text: "Ein erfolgreicher Webauftritt ist ein Prozess, welcher Aktualisierung, Optimierung und Wartung nach der Veröffentlichung voraussetzt.",
     image: wartung_icon,
-    link: "/qwe444qe"
+    link: "/qwe444qe",
+    index: 3,
   },
   {
     id: 3,
     name: "UX/UI Design",
     text: "Erfolgreiche Menüs und Oberflächen stellen den Nutzer in den Mittelpunkt und leiten ihn geschickt und einfach durch jeden Prozess. Probleme werden gelöst und der Nutzer bereichert.",
     image: graphic,
-    link: "/qweq6666we"
+    link: "/qweq6666we",
+    index: 4,
   }
 ]
 

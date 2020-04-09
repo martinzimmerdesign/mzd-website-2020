@@ -13,6 +13,8 @@ import LighthouseBlock from "Components/CaseStudy/LighthouseBlock/LighthouseBloc
 import ImageBlock from "Components/CaseStudy/ImageBlock/ImageBlock.js";
 import BlockWrapper from 'Components/CaseStudy/BlockWrapper.js';
 import { motion } from "framer-motion";
+import ReactDOM from "react-dom";
+import ScrollToTopOnMount from 'Components/ScrollToTopOnMount.js';
 
 export default class BevensenCaseStudy extends React.Component {
   render() {
@@ -39,6 +41,7 @@ export default class BevensenCaseStudy extends React.Component {
 
     return (
       <React.Fragment>
+        <ScrollToTopOnMount />
         <SectionContainer addClass="case-study top-section">
 
           <BlockWrapper>
@@ -58,7 +61,7 @@ export default class BevensenCaseStudy extends React.Component {
             <motion.h2 variants={variants.blockChildren}>INTUITIV</motion.h2>
             <motion.h2 variants={variants.blockChildren}>SCHNELL</motion.h2>
             <motion.h2 variants={variants.blockChildren}>SCHLICHT</motion.h2>
-            <motion.h5 className="figure_subtitle">Die drei Aspekte beim erstellen der Webseite</motion.h5>
+            <motion.h5 variants={variants.blockChildren} className="figure_subtitle">Die drei Aspekte beim erstellen der Webseite</motion.h5>
           </motion.div>
           </BlockWrapper>
 

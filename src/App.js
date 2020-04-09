@@ -2,17 +2,22 @@ import React, { useEffect } from 'react';
 import Button from "./Components/Buttons/Button.js";
 import SitesContainer from "./Sites/SitesContainer.js";
 import { BrowserRouter } from "react-router-dom";
-import ScrollToTop from 'Components/ScrollToTop.js';
+import ReactDOM from "react-dom";
+import locomotiveScroll from "locomotive-scroll";
+
+
 
 function App() {
+
   return (
     <div>
       <div className="App">
-        <BrowserRouter>
-          <ScrollToTop />
-          <SitesContainer />
-        </BrowserRouter>
-      </div>
+
+          <BrowserRouter>
+            <SitesContainer />
+          </BrowserRouter>
+        </div>
+
     </div>
   );
 }

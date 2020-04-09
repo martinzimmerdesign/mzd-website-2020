@@ -25,6 +25,7 @@ export default class LeistungenElementContainer extends React.Component {
             name={item.name}
             text={item.text}
             image={item.image}
+            index={item.index}
           />
         ))}
         </Swiper>

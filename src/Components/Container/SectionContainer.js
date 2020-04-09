@@ -23,7 +23,7 @@ function SectionContainer (props) {
   };
 
   return (
-    <motion.div
+    <motion.div data-scroll data-scroll-position="top"
     className={"section_container " + props.addClass}
     ref={ref}
     variants={variants}
