@@ -15,8 +15,34 @@ import BlockWrapper from 'Components/CaseStudy/BlockWrapper.js';
 import { motion } from "framer-motion";
 import ReactDOM from "react-dom";
 import ScrollToTopOnMount from 'Components/ScrollToTopOnMount.js';
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 export default class BevensenCaseStudy extends React.Component {
+
+  componentDidMount() {
+      this.scroll = new LocomotiveScroll({
+         el: document.querySelector('[data-scroll-container]'),
+         smoothMobile: false,
+         inertia: 1,
+         smooth: true,
+         getDirection: false
+      });
+
+      this.scroll.destroy()
+      setTimeout(() => this.scroll.init(), 100);
+
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.scroll.update();
+  }
+
+  componentWillUnmount() {
+      this.scroll.destroy()
+  }
+
+
   render() {
 
     const variants = {
@@ -40,7 +66,7 @@ export default class BevensenCaseStudy extends React.Component {
       };
 
     return (
-      <React.Fragment>
+      <div data-scroll-container>
         <ScrollToTopOnMount />
         <SectionContainer addClass="case-study top-section">
 
@@ -73,7 +99,7 @@ export default class BevensenCaseStudy extends React.Component {
 
         </SectionContainer>
         <Footer />
-      </React.Fragment>
+      </div>
     );
   }
 }

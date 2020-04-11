@@ -31,6 +31,7 @@ export default class SitesContainer extends React.Component {
 
     return (
         <React.Fragment>
+
           <Route
           render={({ location }) => (
           <AnimatePresence exitBeforeEnter initial={false}>
@@ -52,6 +53,7 @@ export default class SitesContainer extends React.Component {
           </AnimatePresence>
           )}
         />
+
         </React.Fragment>
     );
   }

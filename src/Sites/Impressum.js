@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import Footer from 'Components/Footer/Footer.js';
 import SectionContainer from 'Components/Container/SectionContainer.js';
@@ -6,11 +6,29 @@ import Button from 'Components/Buttons/Button.js';
 import BackButton from "Components/Buttons/BackButton.js";
 import ScrollToTopOnMount from 'Components/ScrollToTopOnMount.js';
 import BlockWrapper from 'Components/CaseStudy/BlockWrapper.js';
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 export default class Impressum extends React.Component {
+
+  componentDidMount() {
+      this.scroll = new LocomotiveScroll({
+         el: document.querySelector('[data-scroll-container]'),
+         smoothMobile: false,
+         inertia: 1,
+         smooth: true,
+         getDirection: false
+      });
+  }
+
+  componentWillUnmount() {
+      this.scroll.destroy()
+  }
+
+
   render() {
     return (
-      <React.Fragment>
+      <div data-scroll-container>
         <ScrollToTopOnMount />
       <SectionContainer>
 
@@ -47,7 +65,7 @@ DE314581712</p>
 <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
     </SectionContainer>
       <Footer />
-      </React.Fragment>
+      </div>
     );
   }
 }

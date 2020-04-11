@@ -5,11 +5,28 @@ import SectionContainer from 'Components/Container/SectionContainer.js';
 import BackButton from "Components/Buttons/BackButton.js";
 import ScrollToTopOnMount from 'Components/ScrollToTopOnMount.js';
 import BlockWrapper from 'Components/CaseStudy/BlockWrapper.js';
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 export default class Datenschutz extends React.Component {
+
+  componentDidMount() {
+      this.scroll = new LocomotiveScroll({
+         el: document.querySelector('[data-scroll-container]'),
+         smoothMobile: false,
+         inertia: 1,
+         smooth: true,
+         getDirection: false
+      });
+  }
+
+  componentWillUnmount() {
+      this.scroll.destroy()
+  }
+
   render() {
     return (
-      <React.Fragment>
+      <div data-scroll-container>
         <ScrollToTopOnMount />
       <SectionContainer>
 
@@ -53,7 +70,7 @@ E-Mail: m.zimmer.business@gmail.com</p>
 
       </SectionContainer>
       <Footer />
-      </React.Fragment>
+      </div>
     );
   }
 }
