@@ -4,21 +4,6 @@ import './ImageBlock.css';
 import BlockWrapper from 'Components/CaseStudy/BlockWrapper.js';
 
 export default class ImageBlock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { imageStatus: "loading" };
-  }
-
-  handleImageLoaded() {
-    this.setState({ imageStatus: "loaded" });
-    console.log("loaded");
-  }
-
-  handleImageErrored() {
-    this.setState({ imageStatus: "failed to load" });
-    console.log("failed");
-  }
-
   render() {
 
   const variants = {
@@ -38,7 +23,6 @@ export default class ImageBlock extends React.Component {
             enter: { y: 0, opacity: 1 },
             exit: { y: 50, opacity: 0 }
       },
-
     };
 
   return (
