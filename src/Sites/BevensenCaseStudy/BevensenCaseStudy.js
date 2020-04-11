@@ -30,7 +30,6 @@ export default class BevensenCaseStudy extends React.Component {
 
       this.scroll.destroy()
       setTimeout(() => this.scroll.init(), 100);
-
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -71,13 +70,13 @@ export default class BevensenCaseStudy extends React.Component {
       };
 
     return (
+      <div>
+        <BlockWrapper>
+        <BackButton animation="true" link="/" />
+        </BlockWrapper>
       <div data-scroll-container>
         <ScrollToTopOnMount />
         <SectionContainer addClass="case-study top-section">
-
-          <BlockWrapper>
-          <BackButton animation="true" link="/" />
-          </BlockWrapper>
 
           <HeaderBlock title={bevensenData.title} subtitle={bevensenData.subtitle} image={bevensenData.header_image} />
 
@@ -105,6 +104,8 @@ export default class BevensenCaseStudy extends React.Component {
         </SectionContainer>
         <Footer />
       </div>
+
+          </div>
     );
   }
 }

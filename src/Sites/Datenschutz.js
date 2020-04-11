@@ -26,13 +26,13 @@ export default class Datenschutz extends React.Component {
 
   render() {
     return (
-      <div data-scroll-container>
-        <ScrollToTopOnMount />
-      <SectionContainer>
-
+      <div>
         <BlockWrapper>
         <BackButton animation="true" link="/" />
         </BlockWrapper>
+      <div data-scroll-container>
+        <ScrollToTopOnMount />
+      <SectionContainer>
 
 <h1>Datenschutzerkl&auml;rung</h1>
 <h2>1. Datenschutz auf einen Blick</h2>
@@ -70,6 +70,7 @@ E-Mail: m.zimmer.business@gmail.com</p>
 
       </SectionContainer>
       <Footer />
+      </div>
       </div>
     );
   }

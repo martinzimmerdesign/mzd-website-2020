@@ -28,14 +28,13 @@ export default class Impressum extends React.Component {
 
   render() {
     return (
-      <div data-scroll-container>
-        <ScrollToTopOnMount />
-      <SectionContainer>
-
+      <div>
         <BlockWrapper>
         <BackButton animation="true" link="/" />
         </BlockWrapper>
-
+      <div data-scroll-container>
+        <ScrollToTopOnMount />
+      <SectionContainer>
 <h1>Impressum</h1>
 
 <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
@@ -65,6 +64,7 @@ DE314581712</p>
 <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
     </SectionContainer>
       <Footer />
+      </div>
       </div>
     );
   }
