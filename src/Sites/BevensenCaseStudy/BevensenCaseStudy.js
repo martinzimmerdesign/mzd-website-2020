@@ -27,9 +27,8 @@ export default class BevensenCaseStudy extends React.Component {
          smooth: true,
          getDirection: false
       });
-
       this.scroll.destroy()
-      setTimeout(() => this.scroll.init(), 100);
+      setTimeout(() => this.scroll.init(), 500);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -42,10 +41,9 @@ export default class BevensenCaseStudy extends React.Component {
 
   refreshLS() {
     this.scroll.destroy()
-    setTimeout(() => this.scroll.init(), 100);
+    setTimeout(() => this.scroll.init(), 500);
     console.log('refreshLS');
   }
-
 
   render() {
 

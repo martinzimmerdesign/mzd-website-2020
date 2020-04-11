@@ -45,7 +45,7 @@ export default class ImageBlock extends React.Component {
     <BlockWrapper>
   <motion.div variants={variants.blockContainer} className="image-block">
     <motion.img onLoad={() => this.props.onLoad()}
-    onError={this.handleImageErrored.bind(this)} variants={variants.blockChildren} className="site_image" alt={this.props.data.alt} src={this.props.data.source}></motion.img>
+    variants={variants.blockChildren} className="site_image" alt={this.props.data.alt} src={this.props.data.source}></motion.img>
     <motion.h5 variants={variants.blockChildren} className="figure_subtitle">{this.props.data.figure_subtitle}</motion.h5>
   </motion.div>
 </BlockWrapper>
