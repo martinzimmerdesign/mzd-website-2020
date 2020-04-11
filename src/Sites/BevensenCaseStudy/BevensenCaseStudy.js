@@ -19,7 +19,6 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
 export default class BevensenCaseStudy extends React.Component {
-
   componentDidMount() {
       this.scroll = new LocomotiveScroll({
          el: document.querySelector('[data-scroll-container]'),
@@ -40,6 +39,12 @@ export default class BevensenCaseStudy extends React.Component {
 
   componentWillUnmount() {
       this.scroll.destroy()
+  }
+
+  refreshLS() {
+    this.scroll.destroy()
+    setTimeout(() => this.scroll.init(), 100);
+    console.log('refreshLS');
   }
 
 
@@ -78,7 +83,7 @@ export default class BevensenCaseStudy extends React.Component {
 
           <TextBlock title="Übersicht" paragraph={bevensenData.overview} />
 
-          <ImageBlock data={bevensenData.image} />
+          <ImageBlock onLoad={() => this.refreshLS()} data={bevensenData.image} />
 
           <TextBlock title="Herausforderungen" paragraph={bevensenData.challenges} />
 
