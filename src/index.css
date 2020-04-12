@@ -2,20 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 
-/*
-  --color-main: #17B292;
-  --color-secondary: #FF9600;
-  --color-main-bright: #2BFFD3;
-  --color-main-bg-from: #10212E;
-  --color-main-bg-to: #002A3C;
-  --color-landing-bg-from: #072635;
-  --color-landing-bg-to: #327175;
-  --color-footer-bg: #0A141C;
-
-  --input-passive-color: #041721;
-
-  */
-
 :root {
   /* Colors */
   --color-main: #10D0BC;
@@ -48,10 +34,10 @@
   --font-size-xxl: 4em;
   /* Screen */
   --content-max-width: 1500px;
-  --border-main: 140px;
+  --border-main: 120px;
   /* Kontakt */
-  --input-height: 55px;
-  --input-width: 360px; /* Beinhaltet die 10px Padding vom Input.*/
+  --input-height: 60px;
+  --input-width: 390px; /* Beinhaltet die 10px Padding vom Input.*/
   --swiper-theme-color: white;
 }
 
@@ -70,7 +56,8 @@
   margin: 0px auto;
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 640px) {
   .section_content {
     width: calc(100% - var(--border-main)/2);
     max-width: var(--content-max-width);

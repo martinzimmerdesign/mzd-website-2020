@@ -26,7 +26,7 @@ export default class Datenschutz extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{wordBreak: "break-word"}}>
         <BlockWrapper>
         <BackButton animation="true" link="/" />
         </BlockWrapper>

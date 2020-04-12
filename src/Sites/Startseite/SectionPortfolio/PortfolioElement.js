@@ -18,7 +18,7 @@ class PortfolioElement extends React.Component {
                 }
               },
               exit: {
-                y: 100,
+                y: 50,
                 opacity: 0,
                 transition: {
                 }

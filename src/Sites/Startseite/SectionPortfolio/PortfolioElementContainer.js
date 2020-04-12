@@ -14,7 +14,7 @@ export default class PortfolioElementContainer extends React.Component {
               enter: {
                 transition: {
                   when: "beforeChildren",
-                  staggerChildren: 0.1,
+                  staggerChildren: 0.2,
                 }
               },
               exit: {
@@ -39,7 +39,7 @@ export default class PortfolioElementContainer extends React.Component {
       slidesPerView: 1,
     },
     // when window width is >= 480px
-    1000: {
+    900: {
       slidesPerView: 2,
     },
     // when window width is >= 640px

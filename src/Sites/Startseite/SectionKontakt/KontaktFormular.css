@@ -9,7 +9,6 @@
 .display_container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .display_wrapper {
@@ -19,10 +18,10 @@
 
 #form h2 {
   font-size: var(--font-size-xl);
-  margin: 70px 0;
-  margin-top: 0;
+  margin: 50px 0;
   text-align: center;
 }
+
 
 .input_wrapper {
   position: relative;
@@ -192,8 +191,17 @@ select:-webkit-autofill:focus {
   color: #6b717d;
 }
 
+@media (max-width: 900px) {
+  .display_container {
+    flex-wrap: wrap;
+  }
 
-@media (max-width: 800px) {
+  .input_wrapper, .message_wrapper, .checkbox_wrapper {
+    width: calc(100vw - var(--border-main)*2);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   #form h2 {
     font-size: var(--font-size-xl);
@@ -201,11 +209,15 @@ select:-webkit-autofill:focus {
     text-align: center;
   }
 
+}
+
+@media (max-width: 640px) {
+  .display_container {
+    flex-wrap: wrap;
+  }
+
   .input_wrapper, .message_wrapper, .checkbox_wrapper {
-    width: calc(100vw - var(--border-main)/2);
-    max-width: var(--input-width);
-    margin-left: auto;
-    margin-right: auto;
+    width: calc(100vw - var(--border-main));
   }
 
 }

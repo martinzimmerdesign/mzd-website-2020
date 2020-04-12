@@ -1,7 +1,7 @@
 .leistung {
   font-family: var(--font-main);
   position: relative;
-  height: 200px;
+  height: 220px;
   width: 800px;
   max-width: calc(100% - 120px);
   border-radius: 8px;
@@ -24,7 +24,7 @@
 }
 
 .leistung_title {
-  color: var(--color-main);
+  color: var(--color-main-bright);
   font-size: var(--font-size-xsl);
   margin: 10px 0;
   font-weight: 600;
@@ -35,20 +35,19 @@
   display: inline-block;
   color: white;
   line-height: 1.6em;
-  width: 50%;
-  max-width: 400px;
-  font-size: var(--font-size-m);
+  font-size: 1.2em;
+  width: 60%;
   z-index: 200;
 }
 
 .leistungen_button_position {
   position: relative;
-  margin-top: 70px;
+  margin-top: 90px;
   float: right;
   z-index: 200;
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1000px) {
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
 
   .leistung {
     height: auto;
@@ -77,7 +76,7 @@
   align-items: center;
   margin: 0 auto;
   height: auto;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
@@ -180,6 +179,7 @@
     color: white;
     line-height: 1.6em;
     width: 100%;
+    font-size: 1.1em;
   }
 
   .leistung_index {

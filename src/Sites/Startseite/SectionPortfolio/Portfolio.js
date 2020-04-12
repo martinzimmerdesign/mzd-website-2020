@@ -9,7 +9,7 @@ import SectionContainer from 'Components/Container/SectionContainer.js';
 
 const data = {
   title: "Portfolio",
-  text: "Für Fragen, Vorschläge oder Anregungen bin ich immer offen, also schreiben Sie mir gerne unverbindlich eine Nachricht.",
+  text: "Meine bisherigen Projekte. Klicke einfach und erfahre mehr!",
 };
 
 export default class Portfolio extends React.Component {

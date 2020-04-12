@@ -28,7 +28,7 @@ export default class Impressum extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{wordBreak: "break-word"}}>
         <BlockWrapper>
         <BackButton animation="true" link="/" />
         </BlockWrapper>
@@ -50,9 +50,6 @@ E-Mail: m.zimmer.business@gmail.com</p>
 <h2>Umsatzsteuer-ID</h2>
 <p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a Umsatzsteuergesetz:<br />
 DE314581712</p>
-
-<h2>Wirtschaftsidentifikationsnummer</h2>
-<p>40 426 381 757</p>
 
 <h2>EU-Streitschlichtung</h2>
 <p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>.<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>

@@ -24,7 +24,7 @@ export default class LeistungenDesktop extends React.Component {
             iconContainer: {
               enter: {
                 transition: {
-                  staggerChildren: 0.2,
+                  staggerChildren: 0.06,
                 }
               },
               exit: {
@@ -44,8 +44,8 @@ export default class LeistungenDesktop extends React.Component {
                 opacity: 1,
                 transition: {
                   when: "beforeChildren",
-                  staggerChildren: 0.2,
-                  delay: 1,
+                  staggerChildren: 0.06,
+                  delay: 0.6,
                 }
               },
               exit: {

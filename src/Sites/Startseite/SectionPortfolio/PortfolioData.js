@@ -13,9 +13,9 @@ const portfolioData = [
   {
     id: 1,
     name: "Gefäßpraxis Bevensen",
-    category: 'Cooperate Design',
+    category: 'Webseite',
     link: "/bevensen-case-study",
-    image: mzd_image,
+    image: gb_image,
     index: 1,
   },
   {
@@ -23,7 +23,7 @@ const portfolioData = [
     name: "Martin Zimmer Design",
     category: 'Social Media',
     link: "/mzd-case-study",
-    image: gb_image,
+    image: mzd_image,
     index: 2,
   }
 ]

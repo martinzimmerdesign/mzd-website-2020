@@ -1,0 +1,26 @@
+.hallo-background {
+  -webkit-text-stroke: 2px var(--color-main-bright);
+  color: rgba(0,0,0,0);
+  position: absolute;
+  font-size: 400px;
+  opacity: 0.1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hallo1 {
+  left: 50px;
+}
+
+.hallo2 {
+  left: 300px;
+  bottom: 180px;
+}
+
+@media (max-width: 1300px) {
+
+  .hallo-background, .hallo2, .hallo1  {
+    display: none;
+  }
+
+}

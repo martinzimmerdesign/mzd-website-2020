@@ -16,6 +16,8 @@ export default class Kontakt extends React.Component {
   render() {
     return (
       <SectionContainer>
+        <h1 className="hallo-background hallo1">Hallo</h1>
+        <h1 className="hallo-background hallo2">Hallo</h1>
           <TitleComp title={data.title} text={data.text} />
           <KontaktFormular />
         </SectionContainer>
