@@ -6,6 +6,7 @@ import ease from 'Styles/Transitions.js';
 import Lottie from 'react-lottie';
 import designJson from './img/design.json';
 import codeJson from './img/code.json';
+import shape1 from './img/blob-shape.svg';
 
 export default class LandingPage extends React.Component {
   constructor() {
@@ -84,7 +85,7 @@ export default class LandingPage extends React.Component {
           </div>
 
           <img className="landing_logo"></img>
-
+          <img className="landing_shape" src={shape1}></img>
           <div className="landing_info">
                 <div>
                     <h3 className="landing_info_text">Scroll runter</h3>

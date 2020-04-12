@@ -78,6 +78,7 @@ export default class LeistungenDesktop extends React.Component {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} variants={variants.contentContainer} className="leistung">
 
 
+
             <AnimatePresence exitBeforeEnter initial={true}>
                     <motion.div
                       key={this.state.id}

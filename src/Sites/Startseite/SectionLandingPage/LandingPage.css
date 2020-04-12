@@ -1,3 +1,15 @@
+/* Angang: Desktop (Big) (Basis) */
+
+.landing_shape {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .landing {
   background-image: var(--grad-bg-landing);
   height: 100vh;
@@ -18,6 +30,7 @@
   margin-right: 40px;
   display: flex;
   flex-direction: column;
+  z-index: 600;
 }
 
 .landing_header {
@@ -26,12 +39,13 @@
   margin: 0;
   font-size: 120px;
   margin-bottom: 40px;
+  width: min-content;
 }
 
 .landing_text {
   text-align: left;
   margin: 0;
-  font-size: 40px;
+  font-size: 30px;
   padding: 20px;
   border: 2px solid var(--color-main-bright);
   width: fit-content;
@@ -93,9 +107,10 @@
   height: 30px;
 }
 
+/* Ende: Desktop (Big) (Basis) */
 
-@media (max-width: 1920px) {
-
+/* Anfang: Desktop (Small) */
+@media (max-width: 1800px) {
 
   .lottie_container {
     height: 550px;
@@ -130,55 +145,11 @@
   }
 
 }
+/* Ende: Desktop (Small) */
 
 
-@media only screen and (min-height: 1200px) and (max-width: 1100px) {
-
-  .landing_content_container {
-    flex-direction: column;
-  }
-
-  .landing_text_container {
-    margin: 0;
-    margin-right: 0px;
-    margin-bottom: 40px;
-  }
-
-  .landing_header {
-    font-size: 120px;
-    margin-bottom: 30px;
-  }
-
-  .landing_text {
-    font-size: 20px;
-    padding: 10px;
-  }
-
-}
-
-@media (max-width: 1100px) {
-
-  .landing_text_container {
-    margin: 0;
-    margin-left: 40px;
-  }
-
-  .landing_header {
-    font-size: 70px;
-    margin-bottom: 30px;
-  }
-
-  .landing_text {
-    font-size: 20px;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 800px) {
-
-  .landing_info {
-    right: 0;
-  }
+/* Anfang: Tablet Big Hochkant */
+@media (max-width: 1300px) {
 
   .lottie_container {
     display: none;
@@ -190,12 +161,58 @@
   }
 
   .landing_header {
-    font-size: 50px;
+    font-size: 120px;
     margin-bottom: 30px;
   }
 
   .landing_text {
-    font-size: 15px;
-    padding: 10px;
+    font-size: 30px;
   }
 }
+/* Ende: Tablet Small Hochkant */
+
+/* Anfang: Tablet Small Hochkant */
+@media (max-width: 900px) {
+
+  .landing_header {
+    font-size: 90px;
+  }
+
+  .landing_text {
+    font-size: 20px;
+  }
+}
+/* Ende: Tablet Small Hochkant */
+
+@media only screen and (device-height: 768px) and (orientation: landscape) {
+
+  .landing_content_container {
+    justify-content: left;
+  }
+
+  .landing_header {
+    font-size: 90px;
+  }
+
+  .landing_text {
+    font-size: 20px;
+  }
+
+}
+
+/* Anfang: Mobile */
+@media (max-width: 630px) {
+
+  .landing_info {
+    right: 0;
+  }
+
+  .landing_header {
+    font-size: 50px;
+  }
+
+  .landing_text {
+    font-size: 15px;
+  }
+}
+/* Ende: Mobile */

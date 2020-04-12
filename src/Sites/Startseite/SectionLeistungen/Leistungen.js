@@ -43,7 +43,6 @@ export default class Leistungen extends React.Component {
     return (
       <SectionContainer>
         <TitleComp title={data.title} />
-
                 <div>
               {isDesktop ? (
                 <LeistungenDesktop />
