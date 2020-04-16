@@ -44,22 +44,37 @@ const ErrorMessageReturn = (msg) => {
     return <span className="error">{msg}</span>;
 };
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 const Formular = () => (
   <div>
     <Formik
       initialValues={values}
       validationSchema={validationSchema}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}
+      onSubmit={
+  (values, actions) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact-demo", ...values })
+    })
+    .then(() => {
+      alert('Success');
+      actions.resetForm()
+    })
+    .catch(() => {
+      alert('Error');
+    })
+    .finally(() => actions.setSubmitting(false))
+  }
+}
     >
       {({ isSubmitting }) => (
-        <form name="contact" method="post">
-          <Form>
-        <input type="hidden" name="form-name" value="contact" />
+          <Form name="contact-demo" data-netlify={true} >
           <motion.div variants={variants.formContainer} id="form">
             <motion.h2 variants={variants.formElements} >Kontaktformular</motion.h2>
             <motion.div variants={variants.formElements} class="display_container">
@@ -89,10 +104,8 @@ const Formular = () => (
                 <span className="button-panel button-front"></span>
             </div>
           </motion.div>
-
         </motion.div>
         </Form>
-      </form>
       )}
     </Formik>
   </div>
