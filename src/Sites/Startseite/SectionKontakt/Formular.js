@@ -60,7 +60,7 @@ const Formular = () => (
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact-demo", ...values })
+      body: encode({ "form-name": "contact", ...values })
     })
     .then(() => {
       alert('Success');
@@ -74,7 +74,7 @@ const Formular = () => (
 }
     >
       {({ isSubmitting }) => (
-          <Form name="contact-demo" data-netlify={true} >
+          <Form name="contact" data-netlify={true} >
           <motion.div variants={variants.formContainer} id="form">
             <motion.h2 variants={variants.formElements} >Kontaktformular</motion.h2>
             <motion.div variants={variants.formElements} class="display_container">
