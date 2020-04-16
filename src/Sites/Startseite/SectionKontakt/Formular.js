@@ -29,19 +29,19 @@ const variants = {
         };
 
 const validationSchema = Yup.object({
-  name: Yup.string("Enter a name").required("Wie heißt du?"),
-  email: Yup.string("Enter your email")
-    .email("Enter a valid email")
-    .required("Email is required"),
-  topic: Yup.string("Enter a name").required("Was ist der Betreff?"),
-  message: Yup.string("Enter a message").required("Was ist der message?"),
-  checkbox: Yup.boolean("Enter a checkbox").oneOf([true], "sefef").required("Was ist der checkbox?"),
+  name: Yup.string("Gib deinen Namen ein.").required("Denk an deinen Namen."),
+  email: Yup.string("Gib deine E-Mail ein.")
+    .email("E-Mail braucht gültiges Format.")
+    .required("Denk an deine E-Mail."),
+  topic: Yup.string("Gib den Betreff ein.").required("Was ist der Betreff?"),
+  message: Yup.string("Gib deine Nachricht ein.").required("Was möchtest du mir sagen?"),
+  checkbox: Yup.boolean("Akzeptiere die Datenschutzerklärung").oneOf([true], "Stimm der Datenschutzerklärung zu.").required("Stimm der Datenschutzerklärung zu."),
 });
 
 const values = { name: "", email: "", topic: "", message: "", checkbox: ""};
 
-const ErrorMessageReturn = (msg) => {
-    return <span className="error">{msg}</span>;
+const ErrorMessageReturn = (props) => {
+    return <span className="error">{props.children}</span>;
 };
 
 const encode = (data) => {
@@ -75,36 +75,32 @@ const Formular = () => (
     >
       {({ isSubmitting }) => (
           <Form name="contact" data-netlify={true} >
-          <motion.div variants={variants.formContainer} id="form">
-            <motion.h2 variants={variants.formElements} >Kontaktformular</motion.h2>
-            <motion.div variants={variants.formElements} class="display_container">
-              <motion.div variants={variants.formElements} className="display_wrapper">
-                <ErrorMessage name="name" render={msg => <span className="error">{msg}</span>} />
-                <Field type="name" name="name" placeholder="Name" component={InputElement} />
-
-                <ErrorMessage name="email" render={msg => <span className="error">{msg}</span>} />
-                <Field type="email" name="email" placeholder="E-Mail Adresse" component={InputElement} />
-
-                <ErrorMessage name="topic" render={msg => <span className="error">{msg}</span>} />
-                <Field type="topic" name="topic" placeholder="Betreff" component={InputElement} />
-              </motion.div>
-              <motion.div variants={variants.formElements} className="display_wrapper">
-                <ErrorMessage name="message" render={msg => <span className="error">{msg}</span>} />
-                <Field type="message" name="message" placeholder="Nachricht" component={TextElement} />
-
-                <ErrorMessage name="checkbox" render={msg => <span className="error">{msg}</span>} />
-                <CheckboxElement name="checkbox" className="checkbox" />
-              </motion.div>
+            <motion.div variants={variants.formContainer} id="form">
+              <motion.h2 variants={variants.formElements} >Kontaktformular</motion.h2>
+              <motion.div variants={variants.formElements} class="display_container">
+                <motion.div variants={variants.formElements} className="display_wrapper">
+                  <ErrorMessage name="name" render={msg => <ErrorMessageReturn>{msg}</ErrorMessageReturn>} />
+                  <Field type="name" name="name" placeholder="Name" component={InputElement} />
+                  <ErrorMessage name="email" render={msg => <ErrorMessageReturn>{msg}</ErrorMessageReturn>} />
+                  <Field type="email" name="email" placeholder="E-Mail Adresse" component={InputElement} />
+                  <ErrorMessage name="topic" render={msg => <ErrorMessageReturn>{msg}</ErrorMessageReturn>} />
+                  <Field type="topic" name="topic" placeholder="Betreff" component={InputElement} />
+                </motion.div>
+                <motion.div variants={variants.formElements} className="display_wrapper">
+                  <ErrorMessage name="message" render={msg => <ErrorMessageReturn>{msg}</ErrorMessageReturn>} />
+                  <Field type="message" name="message" placeholder="Nachricht" component={TextElement} />
+                  <ErrorMessage name="checkbox" render={msg => <ErrorMessageReturn>{msg}</ErrorMessageReturn>} />
+                  <CheckboxElement name="checkbox" className="checkbox" />
+                </motion.div>
+            </motion.div>
+            <motion.div variants={variants.formElements} className="submit_button_container">
+              <div className="button submit">
+                  <button type="submit" disabled={isSubmitting}>Senden</button>
+                  <span className="button-panel button-back"></span>
+                  <span className="button-panel button-front"></span>
+              </div>
+            </motion.div>
           </motion.div>
-
-          <motion.div variants={variants.formElements} className="submit_button_container">
-            <div className="button submit">
-                <button type="submit" disabled={isSubmitting}>Senden</button>
-                <span className="button-panel button-back"></span>
-                <span className="button-panel button-front"></span>
-            </div>
-          </motion.div>
-        </motion.div>
         </Form>
       )}
     </Formik>
