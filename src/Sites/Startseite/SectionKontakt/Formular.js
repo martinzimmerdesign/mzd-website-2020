@@ -76,7 +76,7 @@ const Formular = () => (
       {({ isSubmitting }) => (
           <Form name="contact" data-netlify={true} >
             <motion.div variants={variants.formContainer} id="form">
-              <motion.h2 variants={variants.formElements} >Kontaktformular</motion.h2>
+              <motion.h2 variants={variants.formElements}>Kontaktformular</motion.h2>
               <motion.div variants={variants.formElements} class="display_container">
                 <motion.div variants={variants.formElements} className="display_wrapper">
                   <ErrorMessage name="name" render={msg => <ErrorMessageReturn>{msg}</ErrorMessageReturn>} />

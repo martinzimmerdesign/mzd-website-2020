@@ -5,6 +5,27 @@ import './PortfolioElement.css';
 import { motion } from "framer-motion";
 
 class PortfolioElement extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        isDesktop: true
+      };
+
+      this.updatePredicate = this.updatePredicate.bind(this);
+    }
+    componentDidMount() {
+      this.updatePredicate();
+      window.addEventListener("resize", this.updatePredicate);
+    }
+
+    componentWillUnmount() {
+      window.removeEventListener("resize", this.updatePredicate);
+    }
+
+    updatePredicate() {
+      this.setState({ isDesktop: window.innerWidth > 800 });
+    }
+
   render() {
 
     const variants = {
@@ -18,11 +39,17 @@ class PortfolioElement extends React.Component {
                 }
               },
               exit: {
-                y: 50,
+                y: 30,
                 opacity: 0,
                 transition: {
                 }
-              }
+              },
+              hover: {scale: 1.05},
+              tap: {scale: 0.95 },
+            },
+            blockContainerMobile: {
+              hover: {scale: 1},
+              tap: {scale: 1 },
             },
             cardElements: {
               enter: { y: 0, opacity: 1 },
@@ -32,7 +59,7 @@ class PortfolioElement extends React.Component {
 
     return (
       <motion.div variants={variants.blockContainer} class="swiper-slide">
-      <motion.div variants={variants.blockContainer} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} key={this.props.key}  className="element">
+      <motion.div variants={variants.blockContainer} whileHover={this.state.isDesktop ? variants.blockContainer.hover : variants.blockContainerMobile.hover} whileTap={this.state.isDesktop ? variants.blockContainer.tap : variants.blockContainerMobile.tap} key={this.props.key}  className="element">
       <motion.h1 variants={variants.cardElements} className="name">{this.props.name}</motion.h1>
       <motion.h3 variants={variants.cardElements} className="category">{this.props.category}</motion.h3>
       <Button animation={true} name="Zur Case Study" addClass="button_position" link={this.props.link} />
