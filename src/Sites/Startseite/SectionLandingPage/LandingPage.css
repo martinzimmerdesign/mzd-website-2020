@@ -87,25 +87,15 @@
 
 .landing_info {
   position: absolute;
-  bottom: 30px;
-  right: 50px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   text-transform: uppercase;
-}
-
-.landing_info > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.landing_info_text {
-  font-size: var(--font-size-m);
-  margin: 0;
+  pointer-events: none;
 }
 
 .landing_info_icon {
-  content: url("./img/arrow_icon.png");
-  height: 30px;
+  height: 150px;
 }
 
 /* Ende: Desktop (Big) (Basis) */
@@ -136,13 +126,6 @@
     height: 40px;
     top: calc(var(--border-main)/4);
     right: calc(var(--border-main)/4);
-  }
-
-  .landing_info {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
 }
@@ -203,10 +186,6 @@
 
 /* Anfang: Mobile */
 @media (max-width: 630px) {
-
-  .landing_info {
-    right: 0;
-  }
 
   .landing_header {
     font-size: 50px;
