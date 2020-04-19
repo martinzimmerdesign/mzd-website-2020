@@ -6,6 +6,7 @@
   opacity: 0.1;
   pointer-events: none;
   overflow: hidden;
+  display: none;
 }
 
 .hallo1 {

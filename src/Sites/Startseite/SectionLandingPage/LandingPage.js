@@ -10,9 +10,9 @@ import scrollJson from './img/scroll.json';
 import shape1 from './img/blob-shape.svg';
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
+// let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+// document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
 export default class LandingPage extends React.Component {
@@ -101,10 +101,10 @@ export default class LandingPage extends React.Component {
             </motion.div>
 
           </div>
-
+<img className="landing_shape" src={shape1}></img>
           <motion.div variants={variants.lottieContainer}>
             <motion.img variants={variants.absElements} className="landing_logo"></motion.img>
-            <motion.img variants={variants.absElements} className="landing_shape" src={shape1}></motion.img>
+
             <motion.div variants={variants.absElements} className="landing_info">
                       <div className="landing_info_icon">
                       <Lottie options={scrollIconOptions} />

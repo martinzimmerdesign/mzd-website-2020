@@ -2,8 +2,8 @@
 
 .landing_shape {
   position: absolute;
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
   bottom: 0px;
   right: 0px;
   opacity: 0.3;
@@ -38,15 +38,18 @@
   color: var(--color-main-bright);
   text-align: left;
   margin: 0;
-  font-size: 120px;
+  font-size: 100px;
   margin-bottom: 40px;
   width: min-content;
+  text-transform: uppercase;
+  font-weight: 700;
+
 }
 
 .landing_text {
   text-align: left;
   margin: 0;
-  font-size: 30px;
+  font-size: 25px;
   padding: 20px;
   border: 2px solid var(--color-main-bright);
   width: fit-content;
@@ -79,7 +82,7 @@
 
 .landing_logo {
   content: url("./img/logo_mzd.png");
-  height: 80px;
+  height: 70px;
   position: absolute;
   top: calc(var(--border-main)/2);
   right: calc(var(--border-main)/2);
@@ -95,13 +98,13 @@
 }
 
 .landing_info_icon {
-  height: 150px;
+  height: 140px;
 }
 
 /* Ende: Desktop (Big) (Basis) */
 
 /* Anfang: Desktop (Small) */
-@media (max-width: 1800px) {
+@media (max-width: 2000px) {
 
   .lottie_container {
     height: 550px;
@@ -113,7 +116,38 @@
   }
 
   .landing_header {
-    font-size: 90px;
+    font-size: 80px;
+    margin-bottom: 30px;
+  }
+
+  .landing_text {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .landing_logo {
+    height: 40px;
+    top: calc(var(--border-main)/4);
+    right: calc(var(--border-main)/4);
+  }
+
+}
+/* Ende: Desktop (Small) */
+
+/* Anfang: Desktop (Small) */
+@media (max-width: 1600px) {
+
+  .lottie_container {
+    height: 550px;
+    width: 550px;
+  }
+
+  .lottie_wrapper {
+    width: 450px;
+  }
+
+  .landing_header {
+    font-size: 70px;
     margin-bottom: 30px;
   }
 
@@ -145,12 +179,12 @@
   }
 
   .landing_header {
-    font-size: 120px;
+    font-size: 100px;
     margin-bottom: 30px;
   }
 
   .landing_text {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 /* Ende: Tablet Small Hochkant */
@@ -159,11 +193,11 @@
 @media (max-width: 900px) {
 
   .landing_header {
-    font-size: 90px;
+    font-size: 80px;
   }
 
   .landing_text {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 /* Ende: Tablet Small Hochkant */
@@ -175,11 +209,11 @@
   }
 
   .landing_header {
-    font-size: 90px;
+    font-size: 80px;
   }
 
   .landing_text {
-    font-size: 20px;
+    font-size: 15px;
   }
 
 }
@@ -188,7 +222,7 @@
 @media (max-width: 630px) {
 
   .landing_header {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .landing_text {
