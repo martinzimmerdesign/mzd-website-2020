@@ -7,6 +7,7 @@ import Lottie from 'react-lottie';
 import designJson from './img/design.json';
 import codeJson from './img/code.json';
 import scrollJson from './img/scroll.json';
+import logoJson from './img/logo.json';
 import shape1 from './img/blob-shape.svg';
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -22,6 +23,7 @@ export default class LandingPage extends React.Component {
         zIndexValue: false,
      };
   }
+
 
     changeZIndex = () => {
       this.setState(prevState => ({
@@ -81,6 +83,12 @@ export default class LandingPage extends React.Component {
               autoplay: true,
               animationData: scrollJson,
             };
+        const logoOptions = {
+              loop: false,
+              autoplay: true,
+              animationData: logoJson,
+            };
+
 
     return (
         <SectionContainer addClass="landing">
@@ -103,7 +111,9 @@ export default class LandingPage extends React.Component {
           </div>
 <img className="landing_shape" src={shape1}></img>
           <motion.div variants={variants.lottieContainer}>
-            <motion.img variants={variants.absElements} className="landing_logo"></motion.img>
+            <div className="landing_logo">
+            <Lottie options={logoOptions} />
+          </div>
 
             <motion.div variants={variants.absElements} className="landing_info">
                       <div className="landing_info_icon">
