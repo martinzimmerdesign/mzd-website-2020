@@ -28,7 +28,7 @@ export default class Datenschutz extends React.Component {
     return (
       <div style={{wordBreak: "break-word"}}>
         <BlockWrapper>
-        <BackButton animation="true" link="/" />
+        <BackButton animation="true"  />
         </BlockWrapper>
       <div data-scroll-container>
         <ScrollToTopOnMount />

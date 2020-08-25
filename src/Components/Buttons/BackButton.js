@@ -1,6 +1,6 @@
 import React from 'react';
 import './BackButton.css';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import ease from 'Styles/Transitions.js';
 
@@ -35,14 +35,23 @@ const variants = {
         },
     };
 
-const BackButton = ( {addClass, link, animation} ) =>
-<Link to={link}>
-  <motion.div whileHover="hover" whileTap="tap" variants={variants.buttonContainer} className={"backbutton " + addClass}>
+function BackButton( {addClass, link, animation} ) {
+  let history = useHistory();
 
-      <motion.img variants={variants.buttonIcon} className="backbutton-icon"></motion.img>
+  function handleClick() {
+    history.goBack();
+  }
 
-<motion.h1 variants={variants.buttonText} className="backbutton-text">Zurück</motion.h1>
+  return (
+    <Link to={link}>
+      <motion.div onClick={handleClick} whileHover="hover" whileTap="tap" variants={variants.buttonContainer} className={"backbutton " + addClass}>
 
-  </motion.div>
-</Link>
+          <motion.img variants={variants.buttonIcon} className="backbutton-icon"></motion.img>
+
+    <motion.h1 variants={variants.buttonText} className="backbutton-text">Zurück</motion.h1>
+
+      </motion.div>
+    </Link>
+  );
+}
 export default BackButton;

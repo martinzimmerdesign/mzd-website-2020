@@ -38,7 +38,8 @@ const validationSchema = Yup.object({
   checkbox: Yup.boolean("Akzeptiere die Datenschutzerklärung").oneOf([true], "Stimm der Datenschutzerklärung zu.").required("Stimm der Datenschutzerklärung zu."),
 });
 
-const values = { name: "", email: "", topic: "", message: "", checkbox: ""};
+
+const values = { name: sessionStorage.name, email: sessionStorage.email, topic: sessionStorage.topic, message: sessionStorage.message, checkbox: ""};
 
 const ErrorMessageReturn = (props) => {
     return <span className="error">{props.children}</span>;
@@ -48,6 +49,20 @@ const encode = (data) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
+}
+
+function handleClick() {
+    sessionStorage.name = document.getElementsByName("name")[0].value;
+    values.name = sessionStorage.name;
+
+    sessionStorage.email = document.getElementsByName("email")[0].value;
+    values.email = sessionStorage.email;
+
+    sessionStorage.topic = document.getElementsByName("topic")[0].value;
+    values.topic = sessionStorage.topic;
+
+    sessionStorage.message = document.getElementsByName("message")[0].value;
+    values.message = sessionStorage.message;
 }
 
 const Formular = () => (
@@ -64,6 +79,8 @@ const Formular = () => (
     })
     .then(() => {
       alert('Success');
+      sessionStorage.name = "";
+      document.getElementsByName("name").reset();
       actions.resetForm()
     })
     .catch(() => {
@@ -90,7 +107,9 @@ const Formular = () => (
                   <ErrorMessage name="message" render={msg => <ErrorMessageReturn>{msg}</ErrorMessageReturn>} />
                   <Field type="message" name="message" placeholder="Nachricht" component={TextElement} />
                   <ErrorMessage name="checkbox" render={msg => <ErrorMessageReturn>{msg}</ErrorMessageReturn>} />
+                  <div onClick={handleClick}>
                   <CheckboxElement name="checkbox" className="checkbox" />
+                  </div>
                 </motion.div>
             </motion.div>
             <motion.div variants={variants.formElements} className="submit_button_container">

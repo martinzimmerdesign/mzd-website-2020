@@ -1,9 +1,10 @@
 import React from 'react';
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation, Redirect } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SiteStartseiteContainer from './Startseite/SiteStartseiteContainer';
 import Impressum from './Impressum';
 import Datenschutz from './Datenschutz';
+import ComingSoon from './ComingSoon';
 import ease from 'Styles/Transitions.js';
 import BevensenCaseStudy from './BevensenCaseStudy/BevensenCaseStudy.js';
 
@@ -48,6 +49,11 @@ export default class SitesContainer extends React.Component {
                     <Route path="/impressum" component={Impressum}/>
                     <Route path="/datenschutzerklaerung" component={Datenschutz}/>
                     <Route path="/bevensen-case-study" component={BevensenCaseStudy}/>
+                    <Route path="/coming-soon" component={ComingSoon}/>
+
+                    // Redirect all 404's to home
+                    <Redirect to='/coming-soon' component={ComingSoon}/>
+
                   </Switch>
             </motion.div>
           </AnimatePresence>
