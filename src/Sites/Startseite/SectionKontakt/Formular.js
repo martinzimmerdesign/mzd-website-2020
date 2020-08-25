@@ -79,8 +79,6 @@ const Formular = () => (
     })
     .then(() => {
       alert('Success');
-      sessionStorage.name = "";
-      document.getElementsByName("name").reset();
       actions.resetForm()
     })
     .catch(() => {
