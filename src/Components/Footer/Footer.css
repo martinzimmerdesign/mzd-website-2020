@@ -2,6 +2,8 @@
   background-image: none;
   background-color: var(--color-footer-bg);
   line-height: 1.8em;
+
+  margin-top: auto;
 }
 
 .footer_text {

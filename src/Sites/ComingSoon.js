@@ -11,7 +11,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const data = {
-  title: "Ouch",
+  title: "Sorry",
   text: "Diese Seite ist aktuell noch in Arbeit.",
 };
 
@@ -37,7 +37,7 @@ export default class ComingSoon extends React.Component {
         <BlockWrapper>
         <BackButton animation="true" link="/" />
         </BlockWrapper>
-      <div data-scroll-container>
+      <div data-scroll-container style={{display: "flex", flexDirection: "column"}}>
         <ScrollToTopOnMount />
       <SectionContainer>
       <div style={{minHeight: "50vh"}}>
