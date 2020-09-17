@@ -11,7 +11,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const data = {
-  title: "Sorry",
+  title: "Sorry!",
   text: "Diese Seite ist aktuell noch in Arbeit.",
 };
 
