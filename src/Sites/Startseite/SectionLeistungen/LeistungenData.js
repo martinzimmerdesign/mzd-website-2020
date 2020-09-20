@@ -22,7 +22,7 @@ const leistungenData = [
     name: "Webentwicklung",
     text: "Ein modernes Design braucht eine zeitgemäße technische Umsetzung. Neuste Standards der Programmierung und die Betrachtung aller Gerätegrößen spielen eine sehr wichtige Rolle.",
     image: code2,
-    link: "/qwe333wqe",
+    link: "",
     index: 2,
   },
   {

@@ -33,7 +33,8 @@ const variants = {
 
 const Button = ( {name, addClass, link, animation} ) =>
 <Link to={link}>
-  <motion.div variants={animation ? variants.buttonContainer : variants.noMotion} className={"button " + addClass}>
+  {/* Wenn kein Link vorhanden, wird auch kein Button angezeigt */}
+  <motion.div style={{display: link == '' ? 'none' : 'table'}} variants={animation ? variants.buttonContainer : variants.noMotion} className={"button " + addClass}>
       <motion.h1 variants={animation ? variants.buttonMain : variants.noMotion} className="button-text">{name}</motion.h1>
       <motion.span variants={animation ? variants.buttonBack : variants.noMotion} className="button-panel button-back"></motion.span>
       <motion.span variants={animation ? variants.buttonMain : variants.noMotion} className="button-panel button-front"></motion.span>

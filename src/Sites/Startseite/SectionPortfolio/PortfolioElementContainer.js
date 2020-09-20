@@ -63,6 +63,7 @@ export default class PortfolioElementContainer extends React.Component {
             category={item.category}
             link={item.link}
             image={item.image}
+            imageWp={item.imageWp}
             index={item.index}
           />
         ))}

@@ -1,4 +1,4 @@
-import header from './img/header.png';
+import header from './img/header.jpg';
 
 const bevensenData = {
 

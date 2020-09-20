@@ -59,13 +59,19 @@ class PortfolioElement extends React.Component {
 
     return (
       <motion.div variants={variants.blockContainer} class="swiper-slide">
+      <Link to={this.props.link}>
       <motion.div variants={variants.blockContainer} whileHover={this.state.isDesktop ? variants.blockContainer.hover : variants.blockContainerMobile.hover} whileTap={this.state.isDesktop ? variants.blockContainer.tap : variants.blockContainerMobile.tap} key={this.props.key}  className="element">
       <motion.h1 variants={variants.cardElements} className="name">{this.props.name}</motion.h1>
       <motion.h3 variants={variants.cardElements} className="category">{this.props.category}</motion.h3>
       <Button animation={true} name="Zur Case Study" addClass="button_position" link={this.props.link} />
       <div className="gradient"></div>
-      <img className="image" src={this.props.image}></img>
+      <picture>
+        <source srcSet={this.props.imageWp} type="image/webp" />
+        <source srcSet={this.props.image} type="image/jpg" />
+        <img className="image" src={this.props.image} alt={this.props.name}></img>
+      </picture>
       </motion.div>
+      </Link>
     </motion.div>
     );
   }
