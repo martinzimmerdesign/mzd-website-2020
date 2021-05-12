@@ -21,7 +21,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3",
     "rolly.js": "^0.3.6",
-    "swiper": "^5.3.6",
+    "swiper": "^6.5.1",
     "virtual-scroll": "^1.5.2",
     "yup": "^0.28.3"
   },
